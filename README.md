@@ -2,6 +2,8 @@
 
 ###1. Clone this repository
 
+`git clone https://github.com/neverlose-lv/rss_feed.git`
+
 ###2. Create 2 (two) databases
 -   for project
 -   for project tests
