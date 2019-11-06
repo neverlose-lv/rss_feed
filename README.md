@@ -23,12 +23,14 @@ You should edit two files:
 `.env` and `.env.test`
 and change the 
 `DATABASE_URL` string to connect to the databases you have created
+If you wish, you can create local configuration files, to override the originals.
+The file names should be `.env.local` and `.env.test.local`
 
 ### 4. Run the next commands
 ```
 composer install
-doctrine:migrations:migrate
-doctrine:migrations:migrate --env=test
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:migrations:migrate --env=test
 ```
 
 ### 5. Configure Apache web server
