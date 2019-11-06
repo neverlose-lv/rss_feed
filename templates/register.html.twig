@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+  <div class="registration-form">
+    <h2 class="text-center">Create an account</h2>
+
+    {{ form_start(registrationForm) }}
+    <p class="email-status"></p>
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword) }}
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </div>
+    {{ form_end(registrationForm) }}
+
+    <p class="text-center"><a href="{{ path('user_login') }}">Already have an account? Log In</a></p>
+  </div>
+{% endblock %}

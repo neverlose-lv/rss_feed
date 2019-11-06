@@ -1,0 +1,26 @@
+
+
+Code Coverage Report:       
+  2019-11-06 22:35:15       
+                            
+ Summary:                   
+  Classes: 100.00% (8/8)    
+  Methods: 100.00% (38/38)  
+  Lines:   100.00% (127/127)
+
+\App\Controller::App\Controller\RSSFeedController
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 37/ 37)
+\App\Controller::App\Controller\RegistrationController
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 22/ 22)
+\App\Controller::App\Controller\SecurityController
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  6/  6)
+\App\DataFixtures::App\DataFixtures\UserFixtures
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 10/ 10)
+\App\Entity::App\Entity\TheRegisterCoUkSoftwareHeadlinesFeed
+  Methods: 100.00% (13/13)   Lines: 100.00% ( 19/ 19)
+\App\Entity::App\Entity\User
+  Methods: 100.00% (10/10)   Lines: 100.00% ( 15/ 15)
+\App\Form::App\Form\RegistrationFormType
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 16/ 16)
+\App\Repository::App\Repository\UserRepository
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  2/  2)

@@ -1,0 +1,35 @@
+body {
+    font-size: 14px;
+    padding: 1.5rem;
+}
+
+.login-form, .registration-form {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.invalid-feedback {
+    display: block;
+    margin: 10px 0;
+}
+
+.error {
+    color: #b33;
+}
+
+.success {
+    color: #3b3;
+}
+
+.info {
+    color: #666;
+    font-style: italic;
+}
+
+.rss-feed {
+    max-width: 800px;
+}
+
+.frequent-words__list {
+    max-width: 300px;
+}

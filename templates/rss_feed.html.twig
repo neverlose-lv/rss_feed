@@ -1,0 +1,52 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <nav class="navbar navbar-light bg-light">
+      Logged in as: {{ app.user.email }} <a href="{{ path('user_logout') }}">Log Out</a>
+    </nav>
+  {% endif %}
+
+  <div class="frequent-words my-3">
+    <h3>TOP 10 frequent words</h3>
+    <ul class="list-group frequent-words__list">
+      {% for word, count in frequent_words %}
+        <li class="my-1 list-group-item d-flex justify-content-between align-items-center">
+          {{ word }}
+          <span class="badge badge-primary badge-pill">{{ count }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="rss-feed my-3">
+    <h3>RSS Feed</h3>
+    {% for item in feed %}
+      <div class="card my-2">
+        <div class="card-body">
+          <div class="card-title">
+            <h4>
+              <a href="{{ item.link }}" target="_blank" rel="nofollow">
+                {{ item.title }}
+              </a>
+            </h4>
+          </div>
+          <p class="card-text">{{ item.summary | raw }}</p>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-6">
+              by
+              <a href="{{ item.authorUri }}" target="_blank" rel="nofollow">
+                {{ item.authorName }}
+              </a>
+            </div>
+            <div class="col-6 text-right">
+              {{ item.date | date('j M Y') }} at {{ item.date | date('H:i') }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RSS Feed</title>
+
+  {% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+  {% endblock %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sergejs Volkovs">
+  <meta name="description" content="A demonstration of how can be accomplished RSS Feed home task by mintos">
+  <meta name="robots" content="all">
+
+</head>
+<body>
+{% block content %}{% endblock %}
+{% block javascripts %}
+  <!--[if lt IE 9]>
+  {{ encore_entry_script_tags('html5shiv') }}
+  <![endif]-->
+  {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>
