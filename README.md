@@ -1,27 +1,50 @@
-#Installation
+# Requirements
+Most requirements are listed in `composer.json` file
 
-###1. Clone this repository
+But to be sure, you will need:
+- Apache web server
+
+- PHP version 7.3 or above
+
+- Mysql server
+
+# Installation
+
+### 1. Clone this repository
 
 `git clone https://github.com/neverlose-lv/rss_feed.git`
 
-###2. Create 2 (two) databases
+### 2. Create 2 (two) databases
 -   for project
 -   for project tests
 
-###3. Configure database url
+### 3. Configure database urls
 You should edit two files:
 `.env` and `.env.test`
 and change the 
 `DATABASE_URL` string to connect to the databases you have created
 
-###4. Run the next commands
+### 4. Run the next commands
 ```
 composer install
 doctrine:migrations:migrate
 doctrine:migrations:migrate --env=test
 ```
 
-## Tests coverage
+### 5. Configure Apache web server
+Set `DocumentRoot` to point `/public` directory
+
+Allow to override settings via `.htaccess` file
+
+### Notes
+
+If you meet any problems, feel free to contact me via e-mail:
+volk333 [at] gmail [dot] com
+
+# Running Tests
+`./bin/phpunit`
+
+### Tests coverage
 ```
 Code Coverage Report:       
   2019-11-06 22:35:15       
@@ -48,9 +71,7 @@ Code Coverage Report:
 \App\Repository::App\Repository\UserRepository
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  2/  2)
 ```
-##Notes
-
-P.S.
+### Notes
 
 Please, kindly ignore the next warning, running PHP Unit:
 
@@ -63,12 +84,3 @@ Remaining direct deprecation notices (1)
 
 It is related to to symfony Password Encoder, which was changed to `bcrypt` from `auto`.
 It was changed because on my local environment occurs a Segmentation Fault 11, which can be fixed, by installing another version of PHP, what I'm not going to do right now...
-
-
-
-
-Try to deploy on another server
-
-Write info about how to setup this application in this file
-
-Commit and push this work to github
